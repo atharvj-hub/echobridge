@@ -6,16 +6,17 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def home():
     return jsonify({
-        "message": "EchoBridge API is running",
+        "message": "EchoBridge Emotion API",
         "status": "online",
         "endpoints": {
-            "emotion_analysis": "/api/emotion/analyze (POST)",
-            "health_check": "/api/emotion/health (GET)"
+            "analyze": "/api/emotion/analyze (POST)",
+            "health": "/api/emotion/health (GET)"
         }
     }), 200
 
 @app.route('/api/emotion/analyze', methods=['POST'])
 def analyze_emotion():
+    """Analyze emotion from text input"""
     data = request.get_json()
     
     if not data or 'text' not in data:
@@ -30,7 +31,11 @@ def analyze_emotion():
 
 @app.route('/api/emotion/health', methods=['GET'])
 def emotion_health():
-    return jsonify({"status": "healthy", "service": "emotion_detection"}), 200
+    """Check if emotion detection service is running"""
+    return jsonify({
+        "status": "healthy", 
+        "service": "emotion_detection"
+    }), 200
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
