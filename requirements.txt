@@ -1,0 +1,46 @@
+# Core Dependencies
+torch>=2.0.0
+transformers>=4.30.0
+spacy>=3.7.0
+
+# Web Frameworks
+flask>=3.0.0
+flask-cors>=4.0.0
+streamlit>=1.30.0
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+datasets>=2.14.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+colorama>=0.4.6
+
+# NLP & Text Processing
+textblob>=0.17.1
+nltk>=3.8.1
+emoji>=2.8.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-mock>=3.11.1
+
+# Code Quality
+black>=23.7.0
+flake8>=6.1.0
+mypy>=1.5.0
+
+# Utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+tqdm>=4.66.0
+
+# Production
+gunicorn>=21.2.0
+uvicorn>=0.23.0
+
+
